@@ -11,10 +11,8 @@ RUN \
 # copy main nginx conf setup for Docker
 ADD nginx.conf /etc/nginx/
 
-# copy certificates
-ADD certs /etc/nginx/certs
-
 # copy ssl proxy configuration
+# TODO: check if this overrides default.conf
 ADD sites-enabled /etc/nginx/sites-enabled
 
 # Define default command.
